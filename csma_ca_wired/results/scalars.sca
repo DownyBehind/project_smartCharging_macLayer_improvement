@@ -1,0 +1,4556 @@
+version 3
+run Base-0-20250724-14:23:08-73955
+attr configname Base
+attr datetime 20250724-14:23:08
+attr datetimef 20250724-142308
+attr experiment Base
+attr inifile ini/omnetpp.ini
+attr iterationvars $n=5
+attr iterationvarsd n=5
+attr iterationvarsf n=5-
+attr measurement $n=5
+attr network csma_ca.CsmaCaNetwork
+attr processid 73955
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+itervar n 5
+config description "Ethernet CSMA/CD 실험, 5노드"
+config **.numNodes 5
+config *.host[*].numUdpApps 1
+config *.host[*].udpApp[0].typename UdpBasicApp
+config *.host[*].udpApp[0].destAddresses "\"host[0..-1]\""
+config *.host[*].udpApp[0].messageLength 1000B
+config *.host[*].udpApp[0].sendInterval exponential(1s)
+config network csma_ca.CsmaCaNetwork
+config ned-path "/home/kimdawoon/study/workspace/research/inet/src;                ../ned"
+config load-libs /home/kimdawoon/study/workspace/research/inet/out/clang-release/src/INET
+config output-scalar-file ../results/scalars.sca
+config output-vector-file ../results/vectors.vec
+config sim-time-limit 60s
+
+par CsmaCaNetwork.host[0].ethg$o.channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.host[0].ethg$o.channel disabled false
+attr mutable ""
+par CsmaCaNetwork.host[0].ethg$o.channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.host[0].ethg$o.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.host[0].ethg$o.channel ber 0
+attr mutable ""
+par CsmaCaNetwork.host[0].ethg$o.channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[0].channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.sw.ethg$o[0].channel disabled false
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[0].channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.sw.ethg$o[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.sw.ethg$o[0].channel ber 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[0].channel per 0
+attr mutable ""
+par CsmaCaNetwork.host[1].ethg$o.channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.host[1].ethg$o.channel disabled false
+attr mutable ""
+par CsmaCaNetwork.host[1].ethg$o.channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.host[1].ethg$o.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.host[1].ethg$o.channel ber 0
+attr mutable ""
+par CsmaCaNetwork.host[1].ethg$o.channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[1].channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.sw.ethg$o[1].channel disabled false
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[1].channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.sw.ethg$o[1].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.sw.ethg$o[1].channel ber 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[1].channel per 0
+attr mutable ""
+par CsmaCaNetwork.host[2].ethg$o.channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.host[2].ethg$o.channel disabled false
+attr mutable ""
+par CsmaCaNetwork.host[2].ethg$o.channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.host[2].ethg$o.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.host[2].ethg$o.channel ber 0
+attr mutable ""
+par CsmaCaNetwork.host[2].ethg$o.channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[2].channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.sw.ethg$o[2].channel disabled false
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[2].channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.sw.ethg$o[2].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.sw.ethg$o[2].channel ber 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[2].channel per 0
+attr mutable ""
+par CsmaCaNetwork.host[3].ethg$o.channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.host[3].ethg$o.channel disabled false
+attr mutable ""
+par CsmaCaNetwork.host[3].ethg$o.channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.host[3].ethg$o.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.host[3].ethg$o.channel ber 0
+attr mutable ""
+par CsmaCaNetwork.host[3].ethg$o.channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[3].channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.sw.ethg$o[3].channel disabled false
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[3].channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.sw.ethg$o[3].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.sw.ethg$o[3].channel ber 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[3].channel per 0
+attr mutable ""
+par CsmaCaNetwork.host[4].ethg$o.channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.host[4].ethg$o.channel disabled false
+attr mutable ""
+par CsmaCaNetwork.host[4].ethg$o.channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.host[4].ethg$o.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.host[4].ethg$o.channel ber 0
+attr mutable ""
+par CsmaCaNetwork.host[4].ethg$o.channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[4].channel typename "\"ned.DatarateChannel\""
+par CsmaCaNetwork.sw.ethg$o[4].channel disabled false
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[4].channel delay 0s
+attr mutable ""
+attr unit s
+par CsmaCaNetwork.sw.ethg$o[4].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par CsmaCaNetwork.sw.ethg$o[4].channel ber 0
+attr mutable ""
+par CsmaCaNetwork.sw.ethg$o[4].channel per 0
+attr mutable ""
+par CsmaCaNetwork.sw.eth[0].phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ethg$i[0].channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[1].phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ethg$i[1].channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[2].phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ethg$i[2].channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[3].phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ethg$i[3].channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[4].phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ethg$i[4].channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.macTable typename "\"inet.linklayer.ethernet.common.MacForwardingTable\""
+par CsmaCaNetwork.sw.macTable agingTime 120s
+attr unit s
+par CsmaCaNetwork.sw.macTable forwardingTable []
+attr mutable ""
+par CsmaCaNetwork.sw.macTable forwardingTableFile "\"\""
+par CsmaCaNetwork.sw.macTable interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.macTable displayStringTextFormat "\"addr: %a\\nvlan: %v\""
+par CsmaCaNetwork.sw.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.sw.interfaceTable displayAddresses false
+par CsmaCaNetwork.sw.sc typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.sw.sc displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.sc forwardServiceRegistration true
+par CsmaCaNetwork.sw.sc forwardProtocolRegistration true
+par CsmaCaNetwork.sw.llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.sw.llc registerProtocol true
+par CsmaCaNetwork.sw.cb typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.sw.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.cb forwardServiceRegistration true
+par CsmaCaNetwork.sw.cb forwardProtocolRegistration true
+par CsmaCaNetwork.sw.bridging typename "\"inet.linklayer.ieee8021d.relay.Ieee8021dRelay\""
+par CsmaCaNetwork.sw.bridging macTableModule "\"CsmaCaNetwork.sw.macTable\""
+par CsmaCaNetwork.sw.bridging interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.bridging displayStringTextFormat "\"proc: %p\\ndisc: %d\""
+scalar CsmaCaNetwork.sw.bridging "processed frames" 0
+scalar CsmaCaNetwork.sw.bridging "discarded frames" 0
+scalar CsmaCaNetwork.sw.bridging "number of received BPDUs from STP module" 0
+scalar CsmaCaNetwork.sw.bridging "number of received frames from network (including BPDUs)" 0
+scalar CsmaCaNetwork.sw.bridging "number of dropped frames (including BPDUs)" 0
+scalar CsmaCaNetwork.sw.bridging "number of delivered BPDUs to the STP module" 0
+scalar CsmaCaNetwork.sw.bridging "number of dispatched BPDU frames to the network" 0
+scalar CsmaCaNetwork.sw.bridging "number of dispatched non-BDPU frames to the network" 0
+scalar CsmaCaNetwork.sw.bridging packetDropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "packets dropped, count"
+scalar CsmaCaNetwork.sw.bridging packetDropped:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr title "packets dropped, sum(packetBytes)"
+par CsmaCaNetwork.sw.bl typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.sw.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.bl forwardServiceRegistration true
+par CsmaCaNetwork.sw.bl forwardProtocolRegistration true
+par CsmaCaNetwork.sw.ethernet typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.sw.ethernet registerProtocol true
+par CsmaCaNetwork.sw.ethernet interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.ethernet fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.ethernet stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.ethernet stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.ethernet pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.sw.ethernet pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.sw.ethernet decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.sw.ethernet decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.ethernet encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.sw.ethernet encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter.out.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021q.lowerLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021q.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker.out.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter typename "\"inet.linklayer.ieee8021q.Ieee8021qTagEpdHeaderInserter\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter vlanTagType "\"c\""
+attr enum c,s
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter nextProtocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter defaultVlanId -1
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter defaultPcp -1
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter defaultUserPriority -1
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter defaultDropEligible -1
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter outgoingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedOut, packetPulledOut)"
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter flowOutgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter flowOutgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter incomingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedIn, packetPulledIn)"
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter flowIncomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderInserter flowIncomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker typename "\"inet.linklayer.ieee8021q.Ieee8021qTagEpdHeaderChecker\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker displayStringTextFormat "\"dropped %d/%p pk (%k/%l)\""
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker backpressure false
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker vlanTagType "\"c\""
+attr enum c,s
+par CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker vlanIdFilter []
+attr mutable ""
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker outgoingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedOut, packetPulledOut)"
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowOutgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowOutgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker incomingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedIn, packetPulledIn)"
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowIncomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowIncomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker droppedPackets:count 0
+attr recordingmode count
+attr source packetDropped
+attr title "dropped packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker droppedPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropped)
+attr title "dropped packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker droppedPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetDropped)
+attr title "dropped packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowDroppedPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(demuxFlow(packetDropped))
+attr title "flow specific dropped packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021q.qTagHeaderChecker flowDroppedPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(demuxFlow(packetDropped))
+attr title "flow specific dropped packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+par CsmaCaNetwork.sw.ieee8021q typename "\"inet.linklayer.ieee8021q.Ieee8021qProtocol\""
+par CsmaCaNetwork.sw.ieee8021q vlanTagType "\"c\""
+par CsmaCaNetwork.sw.ieee8021q hasSocketSupport false
+par CsmaCaNetwork.sw.ieee8021r.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter.out.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021r.lowerLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker.out.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter typename "\"inet.linklayer.ieee8021r.Ieee8021rTagEpdHeaderInserter\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter nextProtocol "\"ieee8021qctag\""
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter outgoingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedOut, packetPulledOut)"
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter flowOutgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter flowOutgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter incomingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedIn, packetPulledIn)"
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter flowIncomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderInserter flowIncomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker typename "\"inet.linklayer.ieee8021r.Ieee8021rTagEpdHeaderChecker\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker displayStringTextFormat "\"dropped %d/%p pk (%k/%l)\""
+par CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker backpressure false
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker outgoingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedOut, packetPulledOut)"
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedOut, packetPulledOut))"
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowOutgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowOutgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedOut, packetPulledOut)))"
+attr title "flow specific outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker incomingPackets:count 0
+attr recordingmode count
+attr source "merge(packetPushedIn, packetPulledIn)"
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(merge(packetPushedIn, packetPulledIn))"
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowIncomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowIncomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source "packetLength(demuxFlow(merge(packetPushedIn, packetPulledIn)))"
+attr title "flow specific incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker droppedPackets:count 0
+attr recordingmode count
+attr source packetDropped
+attr title "dropped packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker droppedPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropped)
+attr title "dropped packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker droppedPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetDropped)
+attr title "dropped packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowDroppedPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(demuxFlow(packetDropped))
+attr title "flow specific dropped packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.ieee8021r.rTagHeaderChecker flowDroppedPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(demuxFlow(packetDropped))
+attr title "flow specific dropped packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+par CsmaCaNetwork.sw.ieee8021r typename "\"inet.linklayer.ieee8021r.Ieee8021rProtocol\""
+par CsmaCaNetwork.sw.li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.sw.li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.sw.li forwardServiceRegistration true
+par CsmaCaNetwork.sw.li forwardProtocolRegistration true
+par CsmaCaNetwork.sw.eth[0].mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[0].phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[0].mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[0].queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.sw.eth[0].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.sw.eth[0].queue packetCapacity 1000
+par CsmaCaNetwork.sw.eth[0].queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.sw.eth[0].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.sw.eth[0].queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.sw.eth[0].queue bufferModule "\"\""
+scalar CsmaCaNetwork.sw.eth[0].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[0].queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[0].queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[0].queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[0].queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[0].queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.sw.eth[0].queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[0].queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[0].queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[0].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[0].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.sw.eth[0].mac typename "\"inet.linklayer.ethernet.basic.EthernetMac\""
+par CsmaCaNetwork.sw.eth[0].mac interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[0].mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.sw.eth[0].mac sendRawBytes false
+par CsmaCaNetwork.sw.eth[0].mac promiscuous true
+par CsmaCaNetwork.sw.eth[0].mac duplexMode true
+par CsmaCaNetwork.sw.eth[0].mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.sw.eth[0].mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.eth[0].mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.eth[0].mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.eth[0].mac "simulated time" 60
+scalar CsmaCaNetwork.sw.eth[0].mac full-duplex 1
+scalar CsmaCaNetwork.sw.eth[0].mac "frames/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[0].mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[0].mac "bits/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[0].mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[0].mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.sw.eth[0].mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.sw.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.sw.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.sw.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.sw.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.sw.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.sw.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.sw.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.sw.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.sw.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.sw.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[0] typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.sw.eth[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.sw.eth[0] recordPcap false
+par CsmaCaNetwork.sw.eth[0] numPcapRecorders 0
+par CsmaCaNetwork.sw.eth[0] interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[0] protocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.eth[0] address "\"0A-AA-00-00-00-01\""
+attr mutable ""
+par CsmaCaNetwork.sw.eth[0] duplexMode true
+par CsmaCaNetwork.sw.eth[0] csmacdSupport false
+par CsmaCaNetwork.sw.eth[0] bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.sw.eth[0] fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.sw.eth[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.sw.eth[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.sw.eth[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[1].mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[1].phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[1].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[1].mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[1].queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.sw.eth[1].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.sw.eth[1].queue packetCapacity 1000
+par CsmaCaNetwork.sw.eth[1].queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.sw.eth[1].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.sw.eth[1].queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.sw.eth[1].queue bufferModule "\"\""
+scalar CsmaCaNetwork.sw.eth[1].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[1].queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[1].queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[1].queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[1].queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[1].queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.sw.eth[1].queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[1].queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[1].queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[1].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[1].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.sw.eth[1].mac typename "\"inet.linklayer.ethernet.basic.EthernetMac\""
+par CsmaCaNetwork.sw.eth[1].mac interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[1].mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.sw.eth[1].mac sendRawBytes false
+par CsmaCaNetwork.sw.eth[1].mac promiscuous true
+par CsmaCaNetwork.sw.eth[1].mac duplexMode true
+par CsmaCaNetwork.sw.eth[1].mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.sw.eth[1].mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.eth[1].mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.eth[1].mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.eth[1].mac "simulated time" 60
+scalar CsmaCaNetwork.sw.eth[1].mac full-duplex 1
+scalar CsmaCaNetwork.sw.eth[1].mac "frames/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[1].mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[1].mac "bits/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[1].mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[1].mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.sw.eth[1].mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.sw.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.sw.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.sw.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.sw.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.sw.eth[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.sw.eth[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.sw.eth[1].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.sw.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.sw.eth[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.sw.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[1] typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.sw.eth[1] displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.sw.eth[1] recordPcap false
+par CsmaCaNetwork.sw.eth[1] numPcapRecorders 0
+par CsmaCaNetwork.sw.eth[1] interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[1] protocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.eth[1] address "\"0A-AA-00-00-00-02\""
+attr mutable ""
+par CsmaCaNetwork.sw.eth[1] duplexMode true
+par CsmaCaNetwork.sw.eth[1] csmacdSupport false
+par CsmaCaNetwork.sw.eth[1] bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.sw.eth[1] fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.sw.eth[1] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.sw.eth[1] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[1] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.sw.eth[1] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[2].mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[2].phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[2].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[2].mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[2].queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.sw.eth[2].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.sw.eth[2].queue packetCapacity 1000
+par CsmaCaNetwork.sw.eth[2].queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.sw.eth[2].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.sw.eth[2].queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.sw.eth[2].queue bufferModule "\"\""
+scalar CsmaCaNetwork.sw.eth[2].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[2].queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[2].queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[2].queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[2].queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[2].queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.sw.eth[2].queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[2].queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[2].queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[2].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[2].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.sw.eth[2].mac typename "\"inet.linklayer.ethernet.basic.EthernetMac\""
+par CsmaCaNetwork.sw.eth[2].mac interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[2].mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.sw.eth[2].mac sendRawBytes false
+par CsmaCaNetwork.sw.eth[2].mac promiscuous true
+par CsmaCaNetwork.sw.eth[2].mac duplexMode true
+par CsmaCaNetwork.sw.eth[2].mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.sw.eth[2].mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.eth[2].mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.eth[2].mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.eth[2].mac "simulated time" 60
+scalar CsmaCaNetwork.sw.eth[2].mac full-duplex 1
+scalar CsmaCaNetwork.sw.eth[2].mac "frames/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[2].mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[2].mac "bits/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[2].mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[2].mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.sw.eth[2].mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.sw.eth[2].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.sw.eth[2].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.sw.eth[2].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.sw.eth[2].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.sw.eth[2].mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.sw.eth[2].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.sw.eth[2].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.sw.eth[2].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.sw.eth[2].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.sw.eth[2].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[2] typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.sw.eth[2] displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.sw.eth[2] recordPcap false
+par CsmaCaNetwork.sw.eth[2] numPcapRecorders 0
+par CsmaCaNetwork.sw.eth[2] interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[2] protocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.eth[2] address "\"0A-AA-00-00-00-03\""
+attr mutable ""
+par CsmaCaNetwork.sw.eth[2] duplexMode true
+par CsmaCaNetwork.sw.eth[2] csmacdSupport false
+par CsmaCaNetwork.sw.eth[2] bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.sw.eth[2] fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.sw.eth[2] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.sw.eth[2] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[2] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.sw.eth[2] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[3].mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[3].phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[3].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[3].mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[3].queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.sw.eth[3].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.sw.eth[3].queue packetCapacity 1000
+par CsmaCaNetwork.sw.eth[3].queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.sw.eth[3].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.sw.eth[3].queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.sw.eth[3].queue bufferModule "\"\""
+scalar CsmaCaNetwork.sw.eth[3].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[3].queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[3].queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[3].queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[3].queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[3].queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.sw.eth[3].queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[3].queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[3].queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[3].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[3].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.sw.eth[3].mac typename "\"inet.linklayer.ethernet.basic.EthernetMac\""
+par CsmaCaNetwork.sw.eth[3].mac interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[3].mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.sw.eth[3].mac sendRawBytes false
+par CsmaCaNetwork.sw.eth[3].mac promiscuous true
+par CsmaCaNetwork.sw.eth[3].mac duplexMode true
+par CsmaCaNetwork.sw.eth[3].mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.sw.eth[3].mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.eth[3].mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.eth[3].mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.eth[3].mac "simulated time" 60
+scalar CsmaCaNetwork.sw.eth[3].mac full-duplex 1
+scalar CsmaCaNetwork.sw.eth[3].mac "frames/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[3].mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[3].mac "bits/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[3].mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[3].mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.sw.eth[3].mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.sw.eth[3].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.sw.eth[3].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.sw.eth[3].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.sw.eth[3].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.sw.eth[3].mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.sw.eth[3].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.sw.eth[3].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.sw.eth[3].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.sw.eth[3].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.sw.eth[3].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[3] typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.sw.eth[3] displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.sw.eth[3] recordPcap false
+par CsmaCaNetwork.sw.eth[3] numPcapRecorders 0
+par CsmaCaNetwork.sw.eth[3] interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[3] protocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.eth[3] address "\"0A-AA-00-00-00-04\""
+attr mutable ""
+par CsmaCaNetwork.sw.eth[3] duplexMode true
+par CsmaCaNetwork.sw.eth[3] csmacdSupport false
+par CsmaCaNetwork.sw.eth[3] bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.sw.eth[3] fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.sw.eth[3] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.sw.eth[3] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[3] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.sw.eth[3] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[4].mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[4].phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[4].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[4].mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.sw.eth[4].queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.sw.eth[4].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.sw.eth[4].queue packetCapacity 1000
+par CsmaCaNetwork.sw.eth[4].queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.sw.eth[4].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.sw.eth[4].queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.sw.eth[4].queue bufferModule "\"\""
+scalar CsmaCaNetwork.sw.eth[4].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[4].queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.sw.eth[4].queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[4].queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[4].queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[4].queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.sw.eth[4].queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[4].queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.sw.eth[4].queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.sw.eth[4].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.sw.eth[4].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.sw.eth[4].mac typename "\"inet.linklayer.ethernet.basic.EthernetMac\""
+par CsmaCaNetwork.sw.eth[4].mac interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[4].mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.sw.eth[4].mac sendRawBytes false
+par CsmaCaNetwork.sw.eth[4].mac promiscuous true
+par CsmaCaNetwork.sw.eth[4].mac duplexMode true
+par CsmaCaNetwork.sw.eth[4].mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.sw.eth[4].mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw.eth[4].mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.sw.eth[4].mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.sw.eth[4].mac "simulated time" 60
+scalar CsmaCaNetwork.sw.eth[4].mac full-duplex 1
+scalar CsmaCaNetwork.sw.eth[4].mac "frames/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[4].mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[4].mac "bits/sec sent" 0
+scalar CsmaCaNetwork.sw.eth[4].mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.sw.eth[4].mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.sw.eth[4].mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.sw.eth[4].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.sw.eth[4].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.sw.eth[4].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.sw.eth[4].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.sw.eth[4].mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.sw.eth[4].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.sw.eth[4].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.sw.eth[4].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.sw.eth[4].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.sw.eth[4].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.sw.eth[4] typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.sw.eth[4] displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.sw.eth[4] recordPcap false
+par CsmaCaNetwork.sw.eth[4] numPcapRecorders 0
+par CsmaCaNetwork.sw.eth[4] interfaceTableModule "\"CsmaCaNetwork.sw.interfaceTable\""
+par CsmaCaNetwork.sw.eth[4] protocol "\"ethernetmac\""
+par CsmaCaNetwork.sw.eth[4] address "\"0A-AA-00-00-00-05\""
+attr mutable ""
+par CsmaCaNetwork.sw.eth[4] duplexMode true
+par CsmaCaNetwork.sw.eth[4] csmacdSupport false
+par CsmaCaNetwork.sw.eth[4] bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.sw.eth[4] fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.sw.eth[4] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.sw.eth[4] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.sw.eth[4] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.sw.eth[4] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.sw typename "\"inet.node.ethernet.EthernetSwitch\""
+par CsmaCaNetwork.sw recordPcap false
+par CsmaCaNetwork.sw numPcapRecorders 0
+par CsmaCaNetwork.sw numApps 0
+par CsmaCaNetwork.sw hasStatus false
+par CsmaCaNetwork.sw hasStp false
+par CsmaCaNetwork.sw hasGptp false
+par CsmaCaNetwork.sw hasCutthroughSwitching false
+par CsmaCaNetwork.sw fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.sw spanningTreeProtocol "\"Stp\""
+par CsmaCaNetwork.sw numEthInterfaces 0
+par CsmaCaNetwork.host[0].eth.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].ethg$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.host[0].interfaceTable displayAddresses false
+par CsmaCaNetwork.host[0].cli typename "\"inet.applications.ethernet.EtherAppClient\""
+par CsmaCaNetwork.host[0].cli interfaceTableModule "\"CsmaCaNetwork.host[0].interfaceTable\""
+par CsmaCaNetwork.host[0].cli destAddress "\"\""
+par CsmaCaNetwork.host[0].cli interface "\"eth\""
+par CsmaCaNetwork.host[0].cli startTime 0.548814s
+attr unit s
+par CsmaCaNetwork.host[0].cli stopTime -1s
+attr unit s
+par CsmaCaNetwork.host[0].cli localSAP 240
+par CsmaCaNetwork.host[0].cli remoteSAP 241
+par CsmaCaNetwork.host[0].cli sendInterval "uniform(0s, 1s)"
+attr unit s
+par CsmaCaNetwork.host[0].cli reqLength 100B
+attr unit B
+par CsmaCaNetwork.host[0].cli respLength 1024B
+attr unit B
+par CsmaCaNetwork.host[0].cli stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[0].cli stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[0].cli packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[0].cli packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[0].cli endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[0].cli packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[0].cli packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[0].srv typename "\"inet.applications.ethernet.EtherAppServer\""
+par CsmaCaNetwork.host[0].srv localSAP 241
+par CsmaCaNetwork.host[0].srv stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[0].srv stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[0].srv packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[0].srv packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[0].srv endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[0].srv packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[0].srv packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[0].dp typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[0].dp displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[0].dp forwardServiceRegistration true
+par CsmaCaNetwork.host[0].dp forwardProtocolRegistration true
+par CsmaCaNetwork.host[0].llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.host[0].llc registerProtocol true
+par CsmaCaNetwork.host[0].encap typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.host[0].encap registerProtocol true
+par CsmaCaNetwork.host[0].encap interfaceTableModule "\"CsmaCaNetwork.host[0].interfaceTable\""
+par CsmaCaNetwork.host[0].encap fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[0].encap stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[0].encap stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[0].encap pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.host[0].encap pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.host[0].encap decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.host[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].encap encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.host[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.host[0].li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[0].li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[0].li forwardServiceRegistration true
+par CsmaCaNetwork.host[0].li forwardProtocolRegistration true
+par CsmaCaNetwork.host[0].eth.mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].eth.phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].eth.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].eth.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[0].eth.queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.host[0].eth.queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.host[0].eth.queue packetCapacity 1000
+par CsmaCaNetwork.host[0].eth.queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.host[0].eth.queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.host[0].eth.queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.host[0].eth.queue bufferModule "\"\""
+scalar CsmaCaNetwork.host[0].eth.queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.host[0].eth.queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.host[0].eth.queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.host[0].eth.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[0].eth.queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[0].eth.queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.host[0].eth.queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[0].eth.queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[0].eth.queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[0].eth.queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.host[0].eth.queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.host[0].eth.mac typename "\"inet.linklayer.ethernet.basic.EthernetCsmaMac\""
+par CsmaCaNetwork.host[0].eth.mac interfaceTableModule "\"CsmaCaNetwork.host[0].interfaceTable\""
+par CsmaCaNetwork.host[0].eth.mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.host[0].eth.mac sendRawBytes false
+par CsmaCaNetwork.host[0].eth.mac promiscuous false
+par CsmaCaNetwork.host[0].eth.mac duplexMode true
+par CsmaCaNetwork.host[0].eth.mac frameBursting true
+par CsmaCaNetwork.host[0].eth.mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.host[0].eth.mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[0].eth.mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[0].eth.mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[0].eth.mac "simulated time" 60
+scalar CsmaCaNetwork.host[0].eth.mac full-duplex 1
+scalar CsmaCaNetwork.host[0].eth.mac "frames/sec sent" 0
+scalar CsmaCaNetwork.host[0].eth.mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.host[0].eth.mac "bits/sec sent" 0
+scalar CsmaCaNetwork.host[0].eth.mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.host[0].eth.mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.host[0].eth.mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.host[0].eth.mac "rx channel collision (%)" 0
+scalar CsmaCaNetwork.host[0].eth.mac collisions 0
+scalar CsmaCaNetwork.host[0].eth.mac backoffs 0
+scalar CsmaCaNetwork.host[0].eth.mac backoffSlotsGenerated:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "backoff, count"
+scalar CsmaCaNetwork.host[0].eth.mac collision:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "collision, count"
+scalar CsmaCaNetwork.host[0].eth.mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.host[0].eth.mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.host[0].eth.mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.host[0].eth.mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.host[0].eth.mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.host[0].eth.mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.host[0].eth.mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.host[0].eth.mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.host[0].eth.mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.host[0].eth.mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.host[0].eth typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.host[0].eth displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.host[0].eth recordPcap false
+par CsmaCaNetwork.host[0].eth numPcapRecorders 0
+par CsmaCaNetwork.host[0].eth interfaceTableModule "\"CsmaCaNetwork.host[0].interfaceTable\""
+par CsmaCaNetwork.host[0].eth protocol "\"ethernetmac\""
+par CsmaCaNetwork.host[0].eth address "\"0A-AA-00-00-00-06\""
+attr mutable ""
+par CsmaCaNetwork.host[0].eth duplexMode true
+par CsmaCaNetwork.host[0].eth csmacdSupport true
+par CsmaCaNetwork.host[0].eth bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.host[0].eth fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.host[0].eth packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.host[0].eth packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[0].eth packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.host[0].eth packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.host[0] typename "\"inet.node.ethernet.EthernetHost\""
+par CsmaCaNetwork.host[0] hasStatus false
+par CsmaCaNetwork.host[0] csmacdSupport true
+par CsmaCaNetwork.host[0] fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[1].eth.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].ethg$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.host[1].interfaceTable displayAddresses false
+par CsmaCaNetwork.host[1].cli typename "\"inet.applications.ethernet.EtherAppClient\""
+par CsmaCaNetwork.host[1].cli interfaceTableModule "\"CsmaCaNetwork.host[1].interfaceTable\""
+par CsmaCaNetwork.host[1].cli destAddress "\"\""
+par CsmaCaNetwork.host[1].cli interface "\"eth\""
+par CsmaCaNetwork.host[1].cli startTime 0.592845s
+attr unit s
+par CsmaCaNetwork.host[1].cli stopTime -1s
+attr unit s
+par CsmaCaNetwork.host[1].cli localSAP 240
+par CsmaCaNetwork.host[1].cli remoteSAP 241
+par CsmaCaNetwork.host[1].cli sendInterval "uniform(0s, 1s)"
+attr unit s
+par CsmaCaNetwork.host[1].cli reqLength 100B
+attr unit B
+par CsmaCaNetwork.host[1].cli respLength 1024B
+attr unit B
+par CsmaCaNetwork.host[1].cli stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[1].cli stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[1].cli packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[1].cli packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[1].cli endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[1].cli packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[1].cli packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[1].srv typename "\"inet.applications.ethernet.EtherAppServer\""
+par CsmaCaNetwork.host[1].srv localSAP 241
+par CsmaCaNetwork.host[1].srv stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[1].srv stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[1].srv packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[1].srv packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[1].srv endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[1].srv packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[1].srv packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[1].dp typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[1].dp displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[1].dp forwardServiceRegistration true
+par CsmaCaNetwork.host[1].dp forwardProtocolRegistration true
+par CsmaCaNetwork.host[1].llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.host[1].llc registerProtocol true
+par CsmaCaNetwork.host[1].encap typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.host[1].encap registerProtocol true
+par CsmaCaNetwork.host[1].encap interfaceTableModule "\"CsmaCaNetwork.host[1].interfaceTable\""
+par CsmaCaNetwork.host[1].encap fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[1].encap stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[1].encap stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[1].encap pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.host[1].encap pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.host[1].encap decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.host[1].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].encap encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.host[1].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.host[1].li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[1].li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[1].li forwardServiceRegistration true
+par CsmaCaNetwork.host[1].li forwardProtocolRegistration true
+par CsmaCaNetwork.host[1].eth.mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].eth.phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].eth.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].eth.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[1].eth.queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.host[1].eth.queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.host[1].eth.queue packetCapacity 1000
+par CsmaCaNetwork.host[1].eth.queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.host[1].eth.queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.host[1].eth.queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.host[1].eth.queue bufferModule "\"\""
+scalar CsmaCaNetwork.host[1].eth.queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.host[1].eth.queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.host[1].eth.queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.host[1].eth.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[1].eth.queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[1].eth.queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.host[1].eth.queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[1].eth.queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[1].eth.queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[1].eth.queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.host[1].eth.queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.host[1].eth.mac typename "\"inet.linklayer.ethernet.basic.EthernetCsmaMac\""
+par CsmaCaNetwork.host[1].eth.mac interfaceTableModule "\"CsmaCaNetwork.host[1].interfaceTable\""
+par CsmaCaNetwork.host[1].eth.mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.host[1].eth.mac sendRawBytes false
+par CsmaCaNetwork.host[1].eth.mac promiscuous false
+par CsmaCaNetwork.host[1].eth.mac duplexMode true
+par CsmaCaNetwork.host[1].eth.mac frameBursting true
+par CsmaCaNetwork.host[1].eth.mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.host[1].eth.mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[1].eth.mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[1].eth.mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[1].eth.mac "simulated time" 60
+scalar CsmaCaNetwork.host[1].eth.mac full-duplex 1
+scalar CsmaCaNetwork.host[1].eth.mac "frames/sec sent" 0
+scalar CsmaCaNetwork.host[1].eth.mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.host[1].eth.mac "bits/sec sent" 0
+scalar CsmaCaNetwork.host[1].eth.mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.host[1].eth.mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.host[1].eth.mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.host[1].eth.mac "rx channel collision (%)" 0
+scalar CsmaCaNetwork.host[1].eth.mac collisions 0
+scalar CsmaCaNetwork.host[1].eth.mac backoffs 0
+scalar CsmaCaNetwork.host[1].eth.mac backoffSlotsGenerated:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "backoff, count"
+scalar CsmaCaNetwork.host[1].eth.mac collision:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "collision, count"
+scalar CsmaCaNetwork.host[1].eth.mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.host[1].eth.mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.host[1].eth.mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.host[1].eth.mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.host[1].eth.mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.host[1].eth.mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.host[1].eth.mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.host[1].eth.mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.host[1].eth.mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.host[1].eth.mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.host[1].eth typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.host[1].eth displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.host[1].eth recordPcap false
+par CsmaCaNetwork.host[1].eth numPcapRecorders 0
+par CsmaCaNetwork.host[1].eth interfaceTableModule "\"CsmaCaNetwork.host[1].interfaceTable\""
+par CsmaCaNetwork.host[1].eth protocol "\"ethernetmac\""
+par CsmaCaNetwork.host[1].eth address "\"0A-AA-00-00-00-07\""
+attr mutable ""
+par CsmaCaNetwork.host[1].eth duplexMode true
+par CsmaCaNetwork.host[1].eth csmacdSupport true
+par CsmaCaNetwork.host[1].eth bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.host[1].eth fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.host[1].eth packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.host[1].eth packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[1].eth packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.host[1].eth packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.host[1] typename "\"inet.node.ethernet.EthernetHost\""
+par CsmaCaNetwork.host[1] hasStatus false
+par CsmaCaNetwork.host[1] csmacdSupport true
+par CsmaCaNetwork.host[1] fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[2].eth.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].ethg$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.host[2].interfaceTable displayAddresses false
+par CsmaCaNetwork.host[2].cli typename "\"inet.applications.ethernet.EtherAppClient\""
+par CsmaCaNetwork.host[2].cli interfaceTableModule "\"CsmaCaNetwork.host[2].interfaceTable\""
+par CsmaCaNetwork.host[2].cli destAddress "\"\""
+par CsmaCaNetwork.host[2].cli interface "\"eth\""
+par CsmaCaNetwork.host[2].cli startTime 0.715189s
+attr unit s
+par CsmaCaNetwork.host[2].cli stopTime -1s
+attr unit s
+par CsmaCaNetwork.host[2].cli localSAP 240
+par CsmaCaNetwork.host[2].cli remoteSAP 241
+par CsmaCaNetwork.host[2].cli sendInterval "uniform(0s, 1s)"
+attr unit s
+par CsmaCaNetwork.host[2].cli reqLength 100B
+attr unit B
+par CsmaCaNetwork.host[2].cli respLength 1024B
+attr unit B
+par CsmaCaNetwork.host[2].cli stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[2].cli stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[2].cli packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[2].cli packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[2].cli endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[2].cli packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[2].cli packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[2].srv typename "\"inet.applications.ethernet.EtherAppServer\""
+par CsmaCaNetwork.host[2].srv localSAP 241
+par CsmaCaNetwork.host[2].srv stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[2].srv stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[2].srv packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[2].srv packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[2].srv endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[2].srv packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[2].srv packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[2].dp typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[2].dp displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[2].dp forwardServiceRegistration true
+par CsmaCaNetwork.host[2].dp forwardProtocolRegistration true
+par CsmaCaNetwork.host[2].llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.host[2].llc registerProtocol true
+par CsmaCaNetwork.host[2].encap typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.host[2].encap registerProtocol true
+par CsmaCaNetwork.host[2].encap interfaceTableModule "\"CsmaCaNetwork.host[2].interfaceTable\""
+par CsmaCaNetwork.host[2].encap fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[2].encap stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[2].encap stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[2].encap pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.host[2].encap pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.host[2].encap decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.host[2].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].encap encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.host[2].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.host[2].li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[2].li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[2].li forwardServiceRegistration true
+par CsmaCaNetwork.host[2].li forwardProtocolRegistration true
+par CsmaCaNetwork.host[2].eth.mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].eth.phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].eth.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].eth.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[2].eth.queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.host[2].eth.queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.host[2].eth.queue packetCapacity 1000
+par CsmaCaNetwork.host[2].eth.queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.host[2].eth.queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.host[2].eth.queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.host[2].eth.queue bufferModule "\"\""
+scalar CsmaCaNetwork.host[2].eth.queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.host[2].eth.queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.host[2].eth.queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.host[2].eth.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[2].eth.queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[2].eth.queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.host[2].eth.queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[2].eth.queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[2].eth.queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[2].eth.queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.host[2].eth.queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.host[2].eth.mac typename "\"inet.linklayer.ethernet.basic.EthernetCsmaMac\""
+par CsmaCaNetwork.host[2].eth.mac interfaceTableModule "\"CsmaCaNetwork.host[2].interfaceTable\""
+par CsmaCaNetwork.host[2].eth.mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.host[2].eth.mac sendRawBytes false
+par CsmaCaNetwork.host[2].eth.mac promiscuous false
+par CsmaCaNetwork.host[2].eth.mac duplexMode true
+par CsmaCaNetwork.host[2].eth.mac frameBursting true
+par CsmaCaNetwork.host[2].eth.mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.host[2].eth.mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[2].eth.mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[2].eth.mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[2].eth.mac "simulated time" 60
+scalar CsmaCaNetwork.host[2].eth.mac full-duplex 1
+scalar CsmaCaNetwork.host[2].eth.mac "frames/sec sent" 0
+scalar CsmaCaNetwork.host[2].eth.mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.host[2].eth.mac "bits/sec sent" 0
+scalar CsmaCaNetwork.host[2].eth.mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.host[2].eth.mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.host[2].eth.mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.host[2].eth.mac "rx channel collision (%)" 0
+scalar CsmaCaNetwork.host[2].eth.mac collisions 0
+scalar CsmaCaNetwork.host[2].eth.mac backoffs 0
+scalar CsmaCaNetwork.host[2].eth.mac backoffSlotsGenerated:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "backoff, count"
+scalar CsmaCaNetwork.host[2].eth.mac collision:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "collision, count"
+scalar CsmaCaNetwork.host[2].eth.mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.host[2].eth.mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.host[2].eth.mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.host[2].eth.mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.host[2].eth.mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.host[2].eth.mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.host[2].eth.mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.host[2].eth.mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.host[2].eth.mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.host[2].eth.mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.host[2].eth typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.host[2].eth displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.host[2].eth recordPcap false
+par CsmaCaNetwork.host[2].eth numPcapRecorders 0
+par CsmaCaNetwork.host[2].eth interfaceTableModule "\"CsmaCaNetwork.host[2].interfaceTable\""
+par CsmaCaNetwork.host[2].eth protocol "\"ethernetmac\""
+par CsmaCaNetwork.host[2].eth address "\"0A-AA-00-00-00-08\""
+attr mutable ""
+par CsmaCaNetwork.host[2].eth duplexMode true
+par CsmaCaNetwork.host[2].eth csmacdSupport true
+par CsmaCaNetwork.host[2].eth bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.host[2].eth fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.host[2].eth packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.host[2].eth packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[2].eth packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.host[2].eth packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.host[2] typename "\"inet.node.ethernet.EthernetHost\""
+par CsmaCaNetwork.host[2] hasStatus false
+par CsmaCaNetwork.host[2] csmacdSupport true
+par CsmaCaNetwork.host[2] fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[3].eth.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].ethg$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.host[3].interfaceTable displayAddresses false
+par CsmaCaNetwork.host[3].cli typename "\"inet.applications.ethernet.EtherAppClient\""
+par CsmaCaNetwork.host[3].cli interfaceTableModule "\"CsmaCaNetwork.host[3].interfaceTable\""
+par CsmaCaNetwork.host[3].cli destAddress "\"\""
+par CsmaCaNetwork.host[3].cli interface "\"eth\""
+par CsmaCaNetwork.host[3].cli startTime 0.844266s
+attr unit s
+par CsmaCaNetwork.host[3].cli stopTime -1s
+attr unit s
+par CsmaCaNetwork.host[3].cli localSAP 240
+par CsmaCaNetwork.host[3].cli remoteSAP 241
+par CsmaCaNetwork.host[3].cli sendInterval "uniform(0s, 1s)"
+attr unit s
+par CsmaCaNetwork.host[3].cli reqLength 100B
+attr unit B
+par CsmaCaNetwork.host[3].cli respLength 1024B
+attr unit B
+par CsmaCaNetwork.host[3].cli stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[3].cli stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[3].cli packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[3].cli packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[3].cli endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[3].cli packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[3].cli packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[3].srv typename "\"inet.applications.ethernet.EtherAppServer\""
+par CsmaCaNetwork.host[3].srv localSAP 241
+par CsmaCaNetwork.host[3].srv stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[3].srv stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[3].srv packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[3].srv packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[3].srv endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[3].srv packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[3].srv packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[3].dp typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[3].dp displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[3].dp forwardServiceRegistration true
+par CsmaCaNetwork.host[3].dp forwardProtocolRegistration true
+par CsmaCaNetwork.host[3].llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.host[3].llc registerProtocol true
+par CsmaCaNetwork.host[3].encap typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.host[3].encap registerProtocol true
+par CsmaCaNetwork.host[3].encap interfaceTableModule "\"CsmaCaNetwork.host[3].interfaceTable\""
+par CsmaCaNetwork.host[3].encap fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[3].encap stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[3].encap stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[3].encap pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.host[3].encap pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.host[3].encap decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.host[3].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].encap encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.host[3].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.host[3].li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[3].li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[3].li forwardServiceRegistration true
+par CsmaCaNetwork.host[3].li forwardProtocolRegistration true
+par CsmaCaNetwork.host[3].eth.mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].eth.phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].eth.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].eth.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[3].eth.queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.host[3].eth.queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.host[3].eth.queue packetCapacity 1000
+par CsmaCaNetwork.host[3].eth.queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.host[3].eth.queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.host[3].eth.queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.host[3].eth.queue bufferModule "\"\""
+scalar CsmaCaNetwork.host[3].eth.queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.host[3].eth.queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.host[3].eth.queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.host[3].eth.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[3].eth.queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[3].eth.queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.host[3].eth.queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[3].eth.queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[3].eth.queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[3].eth.queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.host[3].eth.queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.host[3].eth.mac typename "\"inet.linklayer.ethernet.basic.EthernetCsmaMac\""
+par CsmaCaNetwork.host[3].eth.mac interfaceTableModule "\"CsmaCaNetwork.host[3].interfaceTable\""
+par CsmaCaNetwork.host[3].eth.mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.host[3].eth.mac sendRawBytes false
+par CsmaCaNetwork.host[3].eth.mac promiscuous false
+par CsmaCaNetwork.host[3].eth.mac duplexMode true
+par CsmaCaNetwork.host[3].eth.mac frameBursting true
+par CsmaCaNetwork.host[3].eth.mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.host[3].eth.mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[3].eth.mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[3].eth.mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[3].eth.mac "simulated time" 60
+scalar CsmaCaNetwork.host[3].eth.mac full-duplex 1
+scalar CsmaCaNetwork.host[3].eth.mac "frames/sec sent" 0
+scalar CsmaCaNetwork.host[3].eth.mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.host[3].eth.mac "bits/sec sent" 0
+scalar CsmaCaNetwork.host[3].eth.mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.host[3].eth.mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.host[3].eth.mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.host[3].eth.mac "rx channel collision (%)" 0
+scalar CsmaCaNetwork.host[3].eth.mac collisions 0
+scalar CsmaCaNetwork.host[3].eth.mac backoffs 0
+scalar CsmaCaNetwork.host[3].eth.mac backoffSlotsGenerated:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "backoff, count"
+scalar CsmaCaNetwork.host[3].eth.mac collision:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "collision, count"
+scalar CsmaCaNetwork.host[3].eth.mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.host[3].eth.mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.host[3].eth.mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.host[3].eth.mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.host[3].eth.mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.host[3].eth.mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.host[3].eth.mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.host[3].eth.mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.host[3].eth.mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.host[3].eth.mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.host[3].eth typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.host[3].eth displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.host[3].eth recordPcap false
+par CsmaCaNetwork.host[3].eth numPcapRecorders 0
+par CsmaCaNetwork.host[3].eth interfaceTableModule "\"CsmaCaNetwork.host[3].interfaceTable\""
+par CsmaCaNetwork.host[3].eth protocol "\"ethernetmac\""
+par CsmaCaNetwork.host[3].eth address "\"0A-AA-00-00-00-09\""
+attr mutable ""
+par CsmaCaNetwork.host[3].eth duplexMode true
+par CsmaCaNetwork.host[3].eth csmacdSupport true
+par CsmaCaNetwork.host[3].eth bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.host[3].eth fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.host[3].eth packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.host[3].eth packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[3].eth packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.host[3].eth packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.host[3] typename "\"inet.node.ethernet.EthernetHost\""
+par CsmaCaNetwork.host[3] hasStatus false
+par CsmaCaNetwork.host[3] csmacdSupport true
+par CsmaCaNetwork.host[3] fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[4].eth.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].ethg$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par CsmaCaNetwork.host[4].interfaceTable displayAddresses false
+par CsmaCaNetwork.host[4].cli typename "\"inet.applications.ethernet.EtherAppClient\""
+par CsmaCaNetwork.host[4].cli interfaceTableModule "\"CsmaCaNetwork.host[4].interfaceTable\""
+par CsmaCaNetwork.host[4].cli destAddress "\"\""
+par CsmaCaNetwork.host[4].cli interface "\"eth\""
+par CsmaCaNetwork.host[4].cli startTime 0.602763s
+attr unit s
+par CsmaCaNetwork.host[4].cli stopTime -1s
+attr unit s
+par CsmaCaNetwork.host[4].cli localSAP 240
+par CsmaCaNetwork.host[4].cli remoteSAP 241
+par CsmaCaNetwork.host[4].cli sendInterval "uniform(0s, 1s)"
+attr unit s
+par CsmaCaNetwork.host[4].cli reqLength 100B
+attr unit B
+par CsmaCaNetwork.host[4].cli respLength 1024B
+attr unit B
+par CsmaCaNetwork.host[4].cli stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[4].cli stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[4].cli packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[4].cli packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[4].cli endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[4].cli packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[4].cli packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[4].srv typename "\"inet.applications.ethernet.EtherAppServer\""
+par CsmaCaNetwork.host[4].srv localSAP 241
+par CsmaCaNetwork.host[4].srv stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[4].srv stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[4].srv packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar CsmaCaNetwork.host[4].srv packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic CsmaCaNetwork.host[4].srv endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[4].srv packetSent:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar CsmaCaNetwork.host[4].srv packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+par CsmaCaNetwork.host[4].dp typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[4].dp displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[4].dp forwardServiceRegistration true
+par CsmaCaNetwork.host[4].dp forwardProtocolRegistration true
+par CsmaCaNetwork.host[4].llc typename "\"inet.linklayer.ieee8022.Ieee8022Llc\""
+par CsmaCaNetwork.host[4].llc registerProtocol true
+par CsmaCaNetwork.host[4].encap typename "\"inet.linklayer.ethernet.basic.EthernetEncapsulation\""
+par CsmaCaNetwork.host[4].encap registerProtocol true
+par CsmaCaNetwork.host[4].encap interfaceTableModule "\"CsmaCaNetwork.host[4].interfaceTable\""
+par CsmaCaNetwork.host[4].encap fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[4].encap stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[4].encap stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[4].encap pauseSent:count 0
+attr recordingmode count
+attr title "pause sent, count"
+scalar CsmaCaNetwork.host[4].encap pauseSent:sum 0
+attr recordingmode sum
+attr title "pause sent, sum"
+scalar CsmaCaNetwork.host[4].encap decapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar CsmaCaNetwork.host[4].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].encap encapPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar CsmaCaNetwork.host[4].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+par CsmaCaNetwork.host[4].li typename "\"inet.common.MessageDispatcher\""
+par CsmaCaNetwork.host[4].li displayStringTextFormat "\"processed %p pk (%l)\""
+par CsmaCaNetwork.host[4].li forwardServiceRegistration true
+par CsmaCaNetwork.host[4].li forwardProtocolRegistration true
+par CsmaCaNetwork.host[4].eth.mac.phys$o.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].eth.phys$i.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].eth.upperLayerIn.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].eth.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par CsmaCaNetwork.host[4].eth.queue typename "\"inet.linklayer.ethernet.common.EthernetQueue\""
+par CsmaCaNetwork.host[4].eth.queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par CsmaCaNetwork.host[4].eth.queue packetCapacity 1000
+par CsmaCaNetwork.host[4].eth.queue dataCapacity -1b
+attr unit b
+par CsmaCaNetwork.host[4].eth.queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par CsmaCaNetwork.host[4].eth.queue comparatorClass "\"inet::EthernetFrameTypeComparator\""
+par CsmaCaNetwork.host[4].eth.queue bufferModule "\"\""
+scalar CsmaCaNetwork.host[4].eth.queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue queueLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue queueLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar CsmaCaNetwork.host[4].eth.queue queueBitLength:max 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar CsmaCaNetwork.host[4].eth.queue queueBitLength:timeavg 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic CsmaCaNetwork.host[4].eth.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[4].eth.queue outgoingPackets:count 0
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue outgoingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[4].eth.queue outgoingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic CsmaCaNetwork.host[4].eth.queue flowQueueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[4].eth.queue incomingPackets:count 0
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue incomingPacketLengths:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic CsmaCaNetwork.host[4].eth.queue incomingPacketLengths:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar CsmaCaNetwork.host[4].eth.queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar CsmaCaNetwork.host[4].eth.queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par CsmaCaNetwork.host[4].eth.mac typename "\"inet.linklayer.ethernet.basic.EthernetCsmaMac\""
+par CsmaCaNetwork.host[4].eth.mac interfaceTableModule "\"CsmaCaNetwork.host[4].interfaceTable\""
+par CsmaCaNetwork.host[4].eth.mac displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par CsmaCaNetwork.host[4].eth.mac sendRawBytes false
+par CsmaCaNetwork.host[4].eth.mac promiscuous false
+par CsmaCaNetwork.host[4].eth.mac duplexMode true
+par CsmaCaNetwork.host[4].eth.mac frameBursting true
+par CsmaCaNetwork.host[4].eth.mac mtu 1500B
+attr unit B
+par CsmaCaNetwork.host[4].eth.mac fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork.host[4].eth.mac stopOperationExtraTime -1s
+attr unit s
+par CsmaCaNetwork.host[4].eth.mac stopOperationTimeout 2s
+attr unit s
+scalar CsmaCaNetwork.host[4].eth.mac "simulated time" 60
+scalar CsmaCaNetwork.host[4].eth.mac full-duplex 1
+scalar CsmaCaNetwork.host[4].eth.mac "frames/sec sent" 0
+scalar CsmaCaNetwork.host[4].eth.mac "frames/sec rcvd" 0
+scalar CsmaCaNetwork.host[4].eth.mac "bits/sec sent" 0
+scalar CsmaCaNetwork.host[4].eth.mac "bits/sec rcvd" 0
+scalar CsmaCaNetwork.host[4].eth.mac "rx channel idle (%)" 100
+scalar CsmaCaNetwork.host[4].eth.mac "rx channel utilization (%)" 0
+scalar CsmaCaNetwork.host[4].eth.mac "rx channel collision (%)" 0
+scalar CsmaCaNetwork.host[4].eth.mac collisions 0
+scalar CsmaCaNetwork.host[4].eth.mac backoffs 0
+scalar CsmaCaNetwork.host[4].eth.mac backoffSlotsGenerated:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "backoff, count"
+scalar CsmaCaNetwork.host[4].eth.mac collision:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "collision, count"
+scalar CsmaCaNetwork.host[4].eth.mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units received, count"
+scalar CsmaCaNetwork.host[4].eth.mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units received, sum"
+scalar CsmaCaNetwork.host[4].eth.mac txPausePkUnits:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "pause units sent, count"
+scalar CsmaCaNetwork.host[4].eth.mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr title "pause units sent, sum"
+scalar CsmaCaNetwork.host[4].eth.mac rxPkOk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar CsmaCaNetwork.host[4].eth.mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac txPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar CsmaCaNetwork.host[4].eth.mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar CsmaCaNetwork.host[4].eth.mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar CsmaCaNetwork.host[4].eth.mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar CsmaCaNetwork.host[4].eth.mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+par CsmaCaNetwork.host[4].eth typename "\"inet.linklayer.ethernet.EthernetInterface\""
+par CsmaCaNetwork.host[4].eth displayStringTextFormat "\"%a (%i)\\n%m\""
+par CsmaCaNetwork.host[4].eth recordPcap false
+par CsmaCaNetwork.host[4].eth numPcapRecorders 0
+par CsmaCaNetwork.host[4].eth interfaceTableModule "\"CsmaCaNetwork.host[4].interfaceTable\""
+par CsmaCaNetwork.host[4].eth protocol "\"ethernetmac\""
+par CsmaCaNetwork.host[4].eth address "\"0A-AA-00-00-00-0A\""
+attr mutable ""
+par CsmaCaNetwork.host[4].eth duplexMode true
+par CsmaCaNetwork.host[4].eth csmacdSupport true
+par CsmaCaNetwork.host[4].eth bitrate 0bps
+attr unit bps
+par CsmaCaNetwork.host[4].eth fcsMode "\"declared\""
+attr enum declared,computed
+scalar CsmaCaNetwork.host[4].eth packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar CsmaCaNetwork.host[4].eth packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar CsmaCaNetwork.host[4].eth packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar CsmaCaNetwork.host[4].eth packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par CsmaCaNetwork.host[4] typename "\"inet.node.ethernet.EthernetHost\""
+par CsmaCaNetwork.host[4] hasStatus false
+par CsmaCaNetwork.host[4] csmacdSupport true
+par CsmaCaNetwork.host[4] fcsMode "\"declared\""
+attr enum declared,computed
+par CsmaCaNetwork typename "\"csma_ca.CsmaCaNetwork\""
+par CsmaCaNetwork numNodes 5
+attr display i=block/app;
+
