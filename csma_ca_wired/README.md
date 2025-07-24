@@ -9,9 +9,3 @@ opp_run -u Cmdenv \
     ini/omnetpp.ini
 ```
 
-
-##
-
-###
-
-####
