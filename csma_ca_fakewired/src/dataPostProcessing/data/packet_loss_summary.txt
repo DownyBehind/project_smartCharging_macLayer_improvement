@@ -1,0 +1,4 @@
+----- 요약 -----
+- 총 전송 패킷(sentPk): 0
+- 재시도 한계 드랍(packetDropRetryLimitReached): 0
+- 패킷 손실률: 0.00%
